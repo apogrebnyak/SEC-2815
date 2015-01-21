@@ -8,10 +8,8 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @EnableAutoConfiguration
-@Import({
-    SecurityConfig.class
- })
-@ComponentScan
+@Import( PersistenceConfig.class )
+@ComponentScan( basePackageClasses = demo.subpackage.DummyEntity.class )
 public class DemoApplication {
 
     public static void main(final String[] args) {
